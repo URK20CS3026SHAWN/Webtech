@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JS Applications    
+        </title>
+        <script src="Ex5.js"></script>
+        <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/javascript-2038874-1720087.png" type="image/x-icon">
+    </head>
+    <body>
+        <fieldset>
+            <legend><h3>Shortest & Longest Word</h3></legend>
+            Enter a String: <input type="text" name="string" id="string">
+            <button type="submit" onclick="scanStr()">Scan</button> <br>
+            <p id="shortest"></p>
+            <p id="longest"></p>
+            <a href="#weight">Next question!</a>
+        </fieldset><br>
+
+        <fieldset>
+            <legend><h3>BMI Calculator</h3></legend>
+            Weight(in Kilograms): <input type="number" name="weight" id="weight"><br>
+            Height(in Centimeter): <input type="number" name="height" id="height"><br>
+            <button type="submit" onclick="calcBMI()">Calculate BMI</button>
+            <p id="bmi"></p>
+            <p id="result"></p>
+            <a href="#string">Previous question!</a>&nbsp;
+            <a href="#rows">Next question!</a>
+        </fieldset><br>
+
+        <fieldset>
+            <legend><h3>Fruit Farm</h3></legend>
+            Rows:<input type ='number' name="rows" id="rows"><br> 
+            Columns:<input type="number" name="columns" id="cols"><br>
+            <button type="submit" onclick="grow()">Grow Plants</button>
+            <div id="garden"></div><br>
+            <a href="#weight">Previous question!</a>&nbsp;
+            <a href="#data">Next question!</a>
+        </fieldset><br>
+
+        <fieldset>
+            <legend><h3>The Currency Convertor:</h3></legend>
+            Convert: <input type="text" id="data">
+            <select id="from">
+                <option value="USD">USD</option>
+                <option value="INR">INR</option>
+                <option value="YEN">YEN</option>
+            </select>
+            <br> To Value
+            <input type="text" disabled id="answer">
+            <select id="to">
+                <option value="USD">USD</option>
+                <option value="INR">INR</option>
+                <option value="YEN">YEN</option>
+            </select><br>
+            <button type="submit" onclick="convert()">Convert</button><br>
+            <a href="#rows">Previous question!</a>&nbsp;
+            <a href="#third">Next question!</a>
+        </fieldset><br>
+
+        <fieldset>
+            <legend><h3>Coin Flip</h3></legend>
+            <figure>
+                <img src="https://c.tenor.com/tewn7lzVDgcAAAAC/coin-flip-flip.gif" alt="Coin Toss" >
+                <figcaption>Click the Coin to Toss</figcaption>
+            </figure>
+        </fieldset><br>
+
+        <fieldset>
+            <legend><h3>Birthday Cake Order Form</h3></legend>
+
+        </fieldset><br>    
+    </body>
+</html>
