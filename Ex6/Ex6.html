@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Timer Functions and Objects   
+        </title>
+        <script src="Ex6.js"></script>
+        <h1 style="text-align:center;">Timer Functions and Objects</h1>
+        <hr>
+    </head>
+
+    <body bgcolor="BlanchedAlmond">
+        <div>
+            <h2>Digital Clock!</h2>
+            <input id="b1" type="button" onclick="show()" value="Show Time">
+            <span id="time" style="font-size: 32px; "> </span>
+        </div>
+        <hr>
+
+        <div id ="q2">
+            <h2>Dynamic Background!</h2>
+            <input id="b2" type="button" onclick="changeColor()" value="Change BG Color">
+        </div>
+        <hr>
+
+        <div>
+            <h2>Change Font Size!</h2>
+            <p id="p1" onmouseover="incSize()" onmouseout="decSize()">
+                Move cursor over me to zoom in...
+            </p>
+        </div>
+        <hr>
+
+        <div>
+            <h2>X-Axis Moving Car!</h2>
+            <img id="car" src="https://media.istockphoto.com/vectors/racing-car-graphic-design-vector-illustration-vector-id917299360?k=20&m=917299360&s=612x612&w=0&h=N2mH2AOV3bk2OaBKFE_-NO6MaY4LRd5PxfjoT_iwGY8=" alt="racecar" width="80px", height="80px" style="position: relative; left: 0px;">
+            <div id="cb">
+                <input id="b3" type="button" onclick ="startCar()" onpointerdown="accelerate()" value="Start">
+                <input id="b4" type="button" onclick="reverseCar()" value="Reverse" >
+                <input id="b5" type="button" onclick="stopCar()" value="Stop" >
+            </div>
+        </div>
+        <hr>
+
+        <div>
+            <h2>Seperate the Millennials!</h2>
+            <input id="b6" type="button" onclick="categorise()" value="Student Details">
+
+            <div>
+                <h4 id="bfr" style="color: sienna;"></h4>
+                <p id="before" style="color:sienna;"></p>
+            </div>
+            <div>
+                <h4 id="aft" style="color: sienna;"></h4>
+                <p id="after" style="color: sienna;"></p>
+            </div>
+        </div>
+        <hr>
+
+    </body>
+</html>
