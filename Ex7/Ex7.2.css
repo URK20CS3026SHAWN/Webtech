@@ -1,0 +1,27 @@
+.trapezoid {
+	border-bottom: 60px solid rgb(162, 177, 138);
+	border-left: 25px solid transparent;
+	border-right: 55px solid transparent;
+    border-radius: 120% 25% 0% 0%;
+	height: 0;
+	width: 130px;
+    margin-right: 15px;
+}
+.rectangle {
+    height: 75px;
+    width: 300px;
+    background-color: rgb(156, 175, 129);
+    border-radius: 5% 32% 8% 20%;
+    margin-top: -8px;
+}
+
+.circle {
+    height: 60px;
+    width: 60px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+    margin:-35px 50px 0px 48px;
+    position: relative;
+    z-index: 1;
+}
