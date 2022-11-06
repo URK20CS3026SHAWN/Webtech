@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Form Validation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="Ex9.js"></script>
+</head>
+<body class="bg-secondary">
+    <div class="container">
+        <div class="row m-5 p-3 bg-info">
+            <h2>Student form</h2>
+            <form class="form-horizontal" ng-app="form" ng-controller="validateCtrl" name="myForm" novalidate>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="reg">Register number:</label><br>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control " id="reg" name="reg" ng-model="reg" required>
+                    </div>
+                    <span style="color:red" ng-show="myForm.reg.$dirty && myForm.reg.$invalid">
+                        <span ng-show="myForm.reg.$error.required">Register number is required.</span>
+                    </span>
+                </div><br>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="name">Name:</label><br>
+                    <div class="col-sm-10">          
+                        <input type="text" class="form-control" id="name" name="name" required ng-model="name">
+                    </div>
+                    <span style="color:red" ng-show="myForm.name.$dirty && myForm.name.$invalid">
+                        <span ng-show="myForm.name.$error.required">Name is required.</span>
+                    </span>
+                </div><br>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="em">Email:</label><br>
+                    <div class="col-sm-10">          
+                        <input type="email" class="form-control" id="em" name="email" ng-model="email" required>
+                    </div>
+                    <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                        <span ng-show="myForm.email.$error.required">Email is required.</span>
+                        <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                    </span>
+                </div><br>
+                <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary" ng-disabled="myForm.reg.$dirty && myForm.reg.$invalid || myForm.email.$dirty && myForm.email.$invalid || myForm.name.$dirty && myForm.name.$invalid">Submit</button>
+                    </div>
+                </div><br>
+            </form>
+            <a href="https://urk20cs3026shawn.github.io/Webtech/Ex9/Ex9.html" style="color: black;">Student Details!</a>
+        </div>
+    </div>
+</body>
+</html>
