@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Angular Js Apps</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+        <script src="Ex8.js"></script>
+    </head>
+    <body ng-app="Ex8App">
+        <div id='div1'  ng-controller="FrmCtrl">
+            <form>
+                <label for="ta"><b>Post your Comment</b></label> <br>
+                <textarea id="ta" ng-model="txtcomment" placeholder="Your Comment"  style='width:500px'></textarea><br>
+                <button ng-click='btn_add();' style='margin-top:10px;'>Post Comment</button>
+                    <h5>Comments</h5>
+                <ul>
+                    <li ng-repeat="comnt in comment"> {{comnt}} 
+                        <a  style="float: right;" href="" ng-click="remItem($index)">x</a>
+                    </li>
+                </ul>
+            </form> 
+        </div><br><hr>
+
+        
+        <div id='div2' ng-controller="CalcCtrl">
+            <h4>Calculator:</h4>
+            <p><label for="a">Number 1:</label><input id="a" type="number" ng-model="a"><br>
+                <label for="b">Number 2:</label><input id="b" type="number" ng-model="b"></p>
+            <p>Choose the Operator: <select ng-model="operation">
+                  <option> Division (/) </option>
+                  <option>Multiplictn(*)</option>
+                  <option> Addition (+) </option>
+                  <option>Subtraction(-)</option>
+                  
+               </select></p>
+            <p>Result: {{result()}}</p>
+        </div><br><hr>
+
+
+        <div id='div3' ng-controller="TodoCtrl">
+            <h4>To Do List</h4>
+            <input ng-model="new_task"><button ng-click="add()">Add</button>
+            <h4>Tasks</h4>
+            <ul>
+                <li ng-repeat="t in tasks">{{t}} <input type="checkbox" ng-model="d" 
+                    ng-true-value="'YES'" ng-false-value="'NO'" ng-change="done();"></li>
+            </ul>
+            <h4>Tasks Completed:</h4>
+            <ol>
+                <li ng-repeat="d in dtasks">Done</li>
+            </ol>
+        </div><br><hr>
+
+
+        <div id='div5' ng-controller="BMICtrl">
+            <h4>BMI Calculator</h4>
+            <p><label for="h">Height(in cm): </label><input id="h" type="number" ng-model="h"><br>
+                <label for="w">Weight(in Kg): </label><input id="w" type="number" ng-model="w"></p>
+            <button ng-click="bmi_calc()">Calculate BMI</button><br>
+            <label>BMI: </label><span ng-bind="output"></span><br>
+            <label>Category: </label><span ng-bind="comment"></span>
+
+        </div>
+    </body>
+</html>
